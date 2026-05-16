@@ -1,0 +1,116 @@
+{
+  "phase1": {
+    "label": "Phase 1 (无Prompt校准)",
+    "sifi": 0.34,
+    "grade": "D",
+    "desc": "不可用，需要重新训练",
+    "distribution": {
+      "order_rate_real": 0.478,
+      "order_rate_sim": 0.847,
+      "order_rate_diff": 0.369,
+      "chi2": 561.52,
+      "p_value": 0.0,
+      "chi2_passed": false,
+      "score": 0.1
+    },
+    "elasticity": {
+      "type_rates": {
+        "缺乏弹性(刚需)": 0.861,
+        "低弹性(撇脂定价目标)": 0.865,
+        "高弹性(薅羊毛党)": 0.569
+      },
+      "order_correct": false,
+      "spread": 0.292,
+      "score": 0.2
+    },
+    "scenario": {
+      "scene_rates": {
+        "weekday_lunch": 0.855,
+        "afternoon_tea": 0.935,
+        "weekend_rain_dinner": 0.854,
+        "weekday_breakfast": 0.91,
+        "weekend_no_coupon": 0.56,
+        "late_night": 0.899,
+        "holiday_gathering": 0.883,
+        "rain_stuck": 0.883
+      },
+      "coupon_effect": true,
+      "meal_time_effect": false,
+      "rain_response": true,
+      "coupon_lift": 0.328,
+      "significant_coupon_effect": true,
+      "checks_passed": 4,
+      "total_checks": 5,
+      "score": 0.8
+    },
+    "confidence": {
+      "mean": 0.868,
+      "std": 0.081,
+      "min": 0.0,
+      "max": 1.0,
+      "mean_ok": false,
+      "std_ok": false,
+      "order_conf": 0.883,
+      "non_order_conf": 0.789,
+      "conf_order_ok": true,
+      "score": 0.3
+    }
+  },
+  "phase2": {
+    "label": "Phase 2 (有Prompt校准)",
+    "sifi": 0.95,
+    "grade": "A",
+    "desc": "可直接用于补贴策略决策，替代小规模A/B Test",
+    "distribution": {
+      "order_rate_real": 0.478,
+      "order_rate_sim": 0.514,
+      "order_rate_diff": 0.036,
+      "chi2": 204.42,
+      "p_value": 0.0,
+      "chi2_passed": false,
+      "score": 1.0
+    },
+    "elasticity": {
+      "type_rates": {
+        "缺乏弹性(刚需)": 0.534,
+        "低弹性(撇脂定价目标)": 0.486,
+        "高弹性(薅羊毛党)": 0.263
+      },
+      "order_correct": true,
+      "spread": 0.271,
+      "score": 1.0
+    },
+    "scenario": {
+      "scene_rates": {
+        "weekday_lunch": 0.655,
+        "afternoon_tea": 0.655,
+        "weekend_rain_dinner": 0.445,
+        "weekday_breakfast": 0.545,
+        "weekend_no_coupon": 0.055,
+        "late_night": 0.62,
+        "holiday_gathering": 0.57,
+        "rain_stuck": 0.57
+      },
+      "coupon_effect": true,
+      "meal_time_effect": false,
+      "rain_response": true,
+      "coupon_lift": 0.525,
+      "significant_coupon_effect": true,
+      "checks_passed": 4,
+      "total_checks": 5,
+      "score": 0.8
+    },
+    "confidence": {
+      "mean": 0.664,
+      "std": 0.159,
+      "min": 0.2,
+      "max": 0.92,
+      "mean_ok": true,
+      "std_ok": true,
+      "order_conf": 0.775,
+      "non_order_conf": 0.548,
+      "conf_order_ok": true,
+      "score": 1.0
+    }
+  }
+}
